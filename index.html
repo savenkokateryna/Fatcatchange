@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uk">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Fatcatchange — выгодный курс валют в Каменском</title>
-<meta name="description" content="Fatcatchange: актуальный курс валют, онлайн-конвертер, адреса и график работы обменных пунктов в Каменском.">
+<title>Fatcatchange — вигідний курс валют у Кам’янському</title>
+<meta name="description" content="Fatcatchange: актуальний курс валют, онлайн-конвертер, адреси та графік роботи обмінних пунктів у Кам’янському.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;700&family=Unbounded:wght@600;700&display=swap" rel="stylesheet">
 <style>
-/* ===== 1. ПЕРЕМЕННЫЕ (вся палитра в одном месте) ===== */
+/* ===== 1. Змінні (вся палитра в одному місті) ===== */
 :root{
   --navy-900:#081327; --navy-800:#0d1f3c; --navy-700:#152b50; --navy-600:#1f3a68;
   --orange:#ff7a1a; --orange-hover:#ff9440; --text:#e8eefb; --muted:#9fb0d0;
@@ -60,7 +60,7 @@ h2{font-size:clamp(1.5rem,3vw,2.1rem)}
 .swap:hover{background:var(--navy-600);transform:rotate(180deg)}
 .conv-note{margin:1rem 0 0;font-size:.85rem;color:var(--muted)}
 
-/* ===== 4. ТАБЛО КУРСОВ ===== */
+/* ===== 4. ТАБЛО КУРСІВ ===== */
 .board{background:var(--navy-800);border-block:1px solid var(--navy-700)}
 .board-top{display:flex;justify-content:space-between;align-items:end;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem}
 .board-top small{color:var(--muted)}
@@ -77,13 +77,13 @@ td:first-child small{display:block;font-weight:400;color:var(--muted)}
 tbody tr{transition:background .2s}
 tbody tr:hover{background:var(--navy-700)}
 
-/* ===== 5. ПРЕИМУЩЕСТВА ===== */
+/* ===== 5. ПЕРЕВАГИ ===== */
 .perks{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.2rem}
 .perk{padding:1.5rem;border-radius:var(--radius);background:var(--navy-800);border-left:4px solid var(--orange)}
 .perk h3{font-size:1rem}
 .perk p{margin:0;color:var(--muted)}
 
-/* ===== 6. ОТДЕЛЕНИЯ (статус «открыто» считает JS) ===== */
+/* ===== 6. ВІДІЛЕННЯ (статус «відкрито» рахує JS) ===== */
 .branches{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.2rem}
 .branch{padding:1.5rem;border-radius:var(--radius);background:var(--navy-800);border:1px solid var(--navy-700)}
 .branch h3{font-size:1.05rem}
@@ -102,7 +102,7 @@ summary::after{content:"+";color:var(--orange);font-size:1.5rem;line-height:1;tr
 details[open] summary::after{transform:rotate(45deg)}
 details p{margin:.7rem 0 0;color:var(--muted)}
 
-/* ===== 8. ПОДВАЛ ===== */
+/* ===== 8. ПІДВАЛ ===== */
 footer{padding:2rem 0;border-top:1px solid var(--navy-700);color:var(--muted);font-size:.9rem}
 footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 
@@ -124,11 +124,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
     <a href="#top" class="logo"><i>F</i>Fatcatchange</a>
     <button class="burger" aria-label="Меню" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
     <nav class="nav" id="nav">
-      <a href="#rates">Курсы</a>
+      <a href="#rates">Курси</a>
       <a href="#converter">Конвертер</a>
       <a href="#branches">Адреса</a>
-      <a href="#faq">Вопросы</a>
-      <a href="tel:+380000000000" class="btn">Позвонить</a>
+      <a href="#faq">Питання</a>
+      <a href="tel:+380000000000" class="btn">Подзвонити</a>
     </nav>
   </div>
 </header>
@@ -137,27 +137,27 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
   <section class="hero" id="converter">
     <div class="wrap">
       <div>
-        <h1>Обмен валют по курсу, который не стыдно показать</h1>
-        <p>Сверяйте курс онлайн, считайте сумму заранее и приходите в ближайший пункт Fatcatchange в Каменском. Принимаем и ветхие купюры.</p>
+        <h1>Обмін валют по курсу, який не соромно показати</h1>
+        <p>Звіряйте курс онлайн, рахуйте суму завчасно и приходьте в найближчій пункт Fatcatchange в Кам'янському. Приймаємо зношені та старі купюри.</p>
         <div class="actions">
-          <a href="#rates" class="btn">Смотреть курсы</a>
-          <a href="#branches" class="btn ghost">Найти пункт</a>
+          <a href="#rates" class="btn">Дивитись курси</a>
+          <a href="#branches" class="btn ghost">Знайти пункт</a>
         </div>
       </div>
 
-      <!-- Конвертер: логика в блоке <script> ниже -->
+      <!-- Конвертер: логіка в блоці <script> нижче -->
       <div class="conv">
         <h2>Конвертер валют</h2>
-        <label for="amount-from">Отдаёте</label>
+        <label for="amount-from">Віддаєте</label>
         <div class="conv-row">
           <input id="amount-from" type="number" inputmode="decimal" min="0" value="100">
-          <select id="cur-from" aria-label="Валюта, которую отдаёте"></select>
+          <select id="cur-from" aria-label="Валюта, яку віддаєте"></select>
         </div>
-        <button class="swap" id="swap" aria-label="Поменять валюты местами">⇅</button>
-        <label for="amount-to">Получаете</label>
+        <button class="swap" id="swap" aria-label="Поміняти валюти місцями">⇅</button>
+        <label for="amount-to">Отримуєте</label>
         <div class="conv-row">
           <input id="amount-to" type="number" inputmode="decimal" readonly>
-          <select id="cur-to" aria-label="Валюта, которую получаете"></select>
+          <select id="cur-to" aria-label="Валюта, яку отримуєте"></select>
         </div>
         <p class="conv-note" id="conv-note"></p>
       </div>
@@ -167,12 +167,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
   <section class="board" id="rates">
     <div class="wrap">
       <div class="board-top">
-        <h2>Курс валют в Каменском</h2>
+        <h2>Курс валют у Кам'янському</h2>
         <small id="updated"></small>
       </div>
       <div class="table-scroll">
         <table>
-          <thead><tr><th>Валюта</th><th>Покупаем</th><th>Продаём</th></tr></thead>
+          <thead><tr><th>Валюта</th><th>Купуємо</th><th>Продаємо</th></tr></thead>
           <tbody id="rates-body"></tbody>
         </table>
       </div>
@@ -181,29 +181,29 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 
   <section>
     <div class="wrap">
-      <h2>Почему выбирают Fatcatchange</h2>
+      <h2>Чому вибирають Fatcatchange</h2>
       <div class="perks">
-        <div class="perk"><h3>Без скрытых комиссий</h3><p>Сумма на табло — сумма в кассе. Ничего не удерживаем.</p></div>
-        <div class="perk"><h3>Ветхие купюры</h3><p>Принимаем банкноты с износом, если они подлинные.</p></div>
-        <div class="perk"><h3>Каждый день</h3><p>Работаем без выходных с 08:00 до 20:00.</p></div>
-        <div class="perk"><h3>Курс заранее</h3><p>Посчитайте сумму в конвертере и приходите с точной цифрой.</p></div>
+        <div class="perk"><h3>Без прихованих коміссій</h3><p>Сума на табло — сума в касі. Ничого не утримуємо.</p></div>
+        <div class="perk"><h3>Зношені купюри</h3><p>Приймаємо банкноти зі зносом, якщо вони дійсні.</p></div>
+        <div class="perk"><h3>Кожен день</h3><p>Працюємо без вихідних з 08:00 до 20:00.</p></div>
+        <div class="perk"><h3>Курс завчасно</h3><p>Порахуйте суму в конвертері и приходьте з точною цифрою.</p></div>
       </div>
     </div>
   </section>
 
   <section id="branches" class="board">
     <div class="wrap">
-      <h2>Наши пункты обмена</h2>
+      <h2>Наші пункти обміну</h2>
       <div class="branches" id="branches-list"></div>
     </div>
   </section>
 
   <section id="faq">
     <div class="wrap faq">
-      <h2>Частые вопросы</h2>
-      <details><summary>Нужен ли паспорт для обмена?</summary><p>Для небольших сумм документы обычно не требуются. Для крупных операций нужен паспорт — точные лимиты уточняйте в пункте.</p></details>
-      <details><summary>Можно ли зарезервировать валюту?</summary><p>Да, позвоните в пункт заранее и назовите сумму — мы подготовим её к вашему приходу.</p></details>
-      <details><summary>Курс на сайте совпадает с кассовым?</summary><p>Курсы на сайте обновляются в течение дня. Перед крупным обменом уточните курс по телефону.</p></details>
+      <h2>Часті питання</h2>
+      <details><summary>Чи потрібен паспорт для обміну?</summary><p>Для невеликих сум документи зазвичай не потрібні. Для крупних операцій потрібен паспорт — точні ліміти уточнюйте в пункті.</p></details>
+      <details><summary>Чи можна зарезервувати валюту?</summary><p>Так, подзвоніть в пункт завчасно та назвіть суму — ми подготуємо її до вашого приходу.</p></details>
+      <details><summary>Курс на сайте співпадає з касовим?</summary><p>Курси на сайті оновлюються протягом дня. Перед крупним обміном уточнюйте курс за телефоном.</p></details>
     </div>
   </section>
 </main>
@@ -211,27 +211,27 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 <footer>
   <div class="wrap">
     <span>© <span id="year"></span> Fatcatchange</span>
-    <span>Учебный проект. Курсы и адреса — демонстрационные.</span>
+    <span>Пет проєкт. Курси та адреса — демонстраційні.</span>
   </div>
 </footer>
 
 <script>
-/* ===== ДАННЫЕ =====
-   Курсы лежат в объекте — так их легко заменить на ответ API. */
+/* ===== ДАНІ =====
+   Курси лежать в об'єкті — так їх легко замінити на відповідь API. */
 const RATES = {
-  USD:{name:"Доллар США", buy:44.30, sell:44.75, chg:+0.05},
-  EUR:{name:"Евро",       buy:50.80, sell:51.40, chg:-0.04},
-  PLN:{name:"Польский злотый", buy:11.65, sell:12.05, chg:0},
-  CZK:{name:"Чешская крона",   buy:1.94,  sell:2.10,  chg:+0.01},
-  GBP:{name:"Фунт стерлингов", buy:58.90, sell:59.90, chg:-0.10}
+  USD:{name:"Долар США", buy:44.30, sell:44.75, chg:+0.05},
+  EUR:{name:"Євро",       buy:50.80, sell:51.40, chg:-0.04},
+  PLN:{name:"Польський злотий", buy:11.65, sell:12.05, chg:0},
+  CZK:{name:"Чешська крона",   buy:1.94,  sell:2.10,  chg:+0.01},
+  GBP:{name:"Фунт стерлінгів", buy:58.90, sell:59.90, chg:-0.10}
 };
 const BRANCHES = [
-  {name:"Пункт на проспекте", addr:"пр-т Примера, 10", from:8, to:20, phone:"+38 (000) 000-00-01"},
-  {name:"Пункт на площади",   addr:"ул. Образцовая, 5", from:8, to:20, phone:"+38 (000) 000-00-02"}
+  {name:"Пункт на проспекті", addr:"пр-т Прикладу, 10", from:8, to:20, phone:"+38 (000) 000-00-01"},
+  {name:"Пункт на площі",   addr:"вул. Прикладова, 5", from:8, to:20, phone:"+38 (000) 000-00-02"}
 ];
 const fmt = (n,d=2) => n.toLocaleString("ru-RU",{minimumFractionDigits:d,maximumFractionDigits:d});
 
-/* ===== ТАБЛО КУРСОВ: строки создаются из данных ===== */
+/* ===== ТАБЛО КУРСІВ: строки створюються з даних ===== */
 document.getElementById("rates-body").innerHTML = Object.entries(RATES).map(([code,r]) => {
   const cls = r.chg>0 ? "up" : r.chg<0 ? "down" : "";
   const sign = r.chg>0 ? "▲ +" : r.chg<0 ? "▼ " : "";
@@ -240,13 +240,13 @@ document.getElementById("rates-body").innerHTML = Object.entries(RATES).map(([co
     <td><span class="rate sell">${fmt(r.sell)}</span><span class="chg ${cls}">${r.chg?sign+fmt(r.chg):""}</span></td></tr>`;
 }).join("");
 const now = new Date();
-document.getElementById("updated").textContent = "Обновлено: " + now.toLocaleString("ru-RU",{day:"2-digit",month:"long",hour:"2-digit",minute:"2-digit"});
+document.getElementById("updated").textContent = "Оновлено: " + now.toLocaleString("uk-UA",{day:"2-digit",month:"long",hour:"2-digit",minute:"2-digit"});
 document.getElementById("year").textContent = now.getFullYear();
 
 /* ===== КОНВЕРТЕР =====
-   Правило обменника: мы ПОКУПАЕМ валюту клиента по "buy",
-   и ПРОДАЁМ ему валюту по "sell".
-   Любая пара считается через гривну: сумма → UAH → нужная валюта. */
+   Правило обмінника: ми КУПУЄМО валюту клиента по "buy",
+   и ПРОДАЄМО йому валюту по "sell".
+   Будь-яка пара рахується через гривню: сума → UAH → потрібна валюта. */
 const from = document.getElementById("cur-from"), to = document.getElementById("cur-to");
 const amtFrom = document.getElementById("amount-from"), amtTo = document.getElementById("amount-to");
 const codes = ["UAH", ...Object.keys(RATES)];
@@ -260,31 +260,31 @@ function convert(){
   if(isNaN(v) || v<0){ amtTo.value=""; return; }
   const res = from.value===to.value ? v : fromUAH(toUAH(v,from.value),to.value);
   amtTo.value = res.toFixed(2);
-  document.getElementById("conv-note").textContent = `${fmt(v)} ${from.value} ≈ ${fmt(res)} ${to.value}. Итоговый курс уточняйте в пункте.`;
+  document.getElementById("conv-note").textContent = `${fmt(v)} ${from.value} ≈ ${fmt(res)} ${to.value}. Кінцевий курс уточнюйте в пункті.`;
 }
 [amtFrom,from,to].forEach(el => el.addEventListener("input",convert));
 document.getElementById("swap").addEventListener("click",()=>{
-  [from.value,to.value] = [to.value,from.value];   // деструктуризация: меняем значения местами
-  amtFrom.value = amtTo.value || amtFrom.value;    // результат становится новой суммой
+  [from.value,to.value] = [to.value,from.value];   // деструктуризація: змінюємо значения місцями
+  amtFrom.value = amtTo.value || amtFrom.value;    // результат стає новою суммою
   convert();
 });
 convert();
 
-/* ===== ОТДЕЛЕНИЯ: статус «Открыто/Закрыто» по времени посетителя ===== */
+/* ===== ВІДДІЛЕННЯ: статус «Відчинено/зачинено» по часу відвідувача ===== */
 function isOpen(b){ const h = new Date().getHours(); return h>=b.from && h<b.to; }
 document.getElementById("branches-list").innerHTML = BRANCHES.map(b => {
   const open = isOpen(b);
   return `<article class="branch"><h3>${b.name}</h3>
-    <p>${b.addr}</p><p>Ежедневно ${String(b.from).padStart(2,"0")}:00–${b.to}:00</p>
+    <p>${b.addr}</p><p>Щоденно ${String(b.from).padStart(2,"0")}:00–${b.to}:00</p>
     <p><a href="tel:${b.phone.replace(/[^+\d]/g,"")}">${b.phone}</a></p>
-    <span class="status ${open?"open":""}">${open?"Сейчас открыто":"Сейчас закрыто"}</span></article>`;
+    <span class="status ${open?"open":""}">${open?"Зараз відчинено":"Зараз зачинено"}</span></article>`;
 }).join("");
 
 /* ===== БУРГЕР-МЕНЮ ===== */
 const burger = document.querySelector(".burger"), nav = document.getElementById("nav");
 burger.addEventListener("click",()=>{
   const open = nav.classList.toggle("open");
-  burger.setAttribute("aria-expanded", open);   // для скринридеров и для CSS-анимации «крестика»
+  burger.setAttribute("aria-expanded", open);   // для скринридерів и для CSS-анімації «хрестика»
 });
 nav.addEventListener("click",e=>{ if(e.target.tagName==="A"){ nav.classList.remove("open"); burger.setAttribute("aria-expanded","false"); } });
 </script>
